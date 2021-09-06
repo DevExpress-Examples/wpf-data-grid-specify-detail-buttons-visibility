@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowDetailButton", "WpfApplication26\ShowDetailButton.csproj", "{EF63D882-4443-43D7-8A65-AD0516AD130E}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowDetailButton", "WpfApplication26\ShowDetailButton.Net5.csproj", "{EF63D882-4443-43D7-8A65-AD0516AD130E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
