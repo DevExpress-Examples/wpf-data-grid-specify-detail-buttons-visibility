@@ -1,9 +1,8 @@
 Imports System
+Imports System.Globalization
 Imports System.Linq
 Imports System.Windows
-Imports System.Windows.Controls
 Imports System.Windows.Data
-Imports System.Globalization
 
 Namespace WpfApplication26
 
@@ -12,7 +11,7 @@ Namespace WpfApplication26
 
         Public Sub New()
             Me.InitializeComponent()
-            Me.grid1.ItemsSource = New DataSource().Categories
+            Me.grid.ItemsSource = DataSource.GetCategories()
         End Sub
     End Class
 
@@ -21,12 +20,12 @@ Namespace WpfApplication26
         Implements IValueConverter
 
         Public Function Convert(ByVal value As Object, ByVal targetType As Type, ByVal parameter As Object, ByVal culture As CultureInfo) As Object Implements IValueConverter.Convert
-            ' Obtaining the value to be converted 
+            ' Obtain the value to be converted:
             Dim categoryValue As String = CStr(value)
-            ' Specifying values for which to show expand buttons
+            ' Specify values for which to show expand buttons:
             Dim categories As String() = New String() {"First", "Third"}
             If categories.Contains(categoryValue) Then Return True
-            ' Disable expand button if the value isn't in the list
+            ' Disable expand buttons if the value is not in the list:
             Return False
         End Function
 
